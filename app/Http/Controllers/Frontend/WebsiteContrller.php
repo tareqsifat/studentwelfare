@@ -16,6 +16,10 @@ class WebsiteContrller extends Controller
     public function save_user_info(Request $request)
     {
         $this->validate($request,[
+            'photo'=>['required'],
+            'gander'=>['required'],
+            'medium'=>['required'],
+            'is_school'=>['required'],
             'name'=>['required'],
             'name_eng'=>['required'],
             'father_name'=>['required'],
@@ -41,6 +45,7 @@ class WebsiteContrller extends Controller
         $user->photo = $request->photo;
         $user->gender = $request->gender;
         $user->medium = $request->medium;
+        $user->is_school = $request->is_school;
         $user->name = $request->name;
         $user->name_eng = $request->name_eng;
         $user->father_name = $request->father_name;

@@ -18,14 +18,14 @@ input[type=date] {
   padding: 5px;
   box-sizing: border-box;
 }
-form table td {
+/* form table td {
   border-bottom: 1px solid #f0f0f0;
-}
+} */
 .form-error {
-  background-color: red;
+  background-color: #FFB0B0 !important;
 }
 form table td {
-  padding: 10px 5px;
+  padding: 0px 5px;
   /* border: 1px solid red; */
 }
 p {
