@@ -1,0 +1,417 @@
+@media screen and (max-width: 575.99px) {
+    #header .header_right .header_right_top .left {
+        width: 110px;
+    }
+
+    .select_iamge_body {
+        width: 100%;
+        height: 130px;
+    }
+
+    .gender label {
+        font-size: 17px;
+        padding: 0px 10px;
+    }
+
+    #header2 .header_right .header_right_top .right h1,
+    .heading_text {
+        font-size: 16px;
+    }
+
+    #header2 .header_right .header_right_top .right h2,
+    .heading_text_2 {
+        font-size: 14px;
+    }
+
+    .heading_p {
+        font-size: 14px;
+    }
+
+    .fill_by_office_table tr td h3 {
+        font-size: 14px;
+        width: 62%;
+    }
+
+    .reg_form_btn {
+        font-size: 16px;
+    }
+
+    .select_sc_madrsa {
+        font-size: 13px;
+    }
+
+    textarea,
+    select,
+    input[type=text],
+    input[type=email],
+    input[type=number],
+    input[type=date] {
+        width: 100%;
+        margin: 6px 0px;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .fill_by_office_table_body {
+        height: 228px !important;
+    }
+
+    .fill_by_office_table {
+        width: 100%;
+        top: 20px;
+        right: 0;
+
+    }
+
+    .fill_by_office_table label {
+        font-size: 14px;
+    }
+
+    .fill_by_office_table input {
+        padding: 3px;
+        font-size: 14px;
+    }
+
+    #header2 .header_right .header_right_top .left {
+        width: 176px;
+        box-sizing: border-box;
+        padding: 0px 20px;
+    }
+
+    #header2 .header_right .header_right_top .right {
+        width: 67%;
+    }
+
+    #header2 .header_right .header_right_top .end {
+        width: 41%;
+        position: relative;
+        left: 57%;
+    }
+
+    #signature h4 {
+        font-size: 14px;
+    }
+
+    #header2 .header_left {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #header .header_left {
+        width: 100%;
+        order: 2;
+    }
+
+    #header .header_right {
+        order: 1;
+    }
+
+    #header2 .header_right .header_right_top .left {
+        width: 100%;
+    }
+
+    #header .header_right .header_right_top .right {
+        width: 100%;
+    }
+
+    .form_table div {
+        width: 100%;
+    }
+
+    .form_table div label {
+        padding: 0px 10px 0px 0px;
+    }
+
+    .class_section div {
+        width: 24%;
+    }
+}
+
+@media (min-width:576px) and (max-width: 767.99px) {
+    #header .header_right .header_right_top .left {
+        width: 110px;
+    }
+
+
+    #header .header_left {
+        width: 160px;
+    }
+
+    .select_iamge_body {
+        width: 100%;
+        height: 130px;
+    }
+
+    .gender label {
+        font-size: 17px;
+        padding: 0px 10px;
+    }
+
+    #header2 .header_right .header_right_top .right h1,
+    .heading_text {
+        font-size: 18px;
+    }
+
+    #header2 .header_right .header_right_top .right h2,
+    .heading_text_2 {
+        font-size: 16px;
+    }
+
+    .heading_p {
+        font-size: 14px;
+    }
+
+    .fill_by_office_table tr td h3 {
+        font-size: 14px;
+        width: 62%;
+    }
+
+    .reg_form_btn {
+        font-size: 16px;
+    }
+
+    .select_sc_madrsa {
+        font-size: 13px;
+    }
+
+    textarea,
+    select,
+    input[type=text],
+    input[type=email],
+    input[type=number],
+    input[type=date] {
+        width: 100%;
+        margin: 6px 0px;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .fill_by_office_table_body {
+        height: 228px !important;
+    }
+
+    .fill_by_office_table {
+        width: 100%;
+        top: 20px;
+        right: 0;
+
+    }
+
+    .fill_by_office_table label {
+        font-size: 14px;
+    }
+
+    .fill_by_office_table input {
+        padding: 3px;
+        font-size: 14px;
+    }
+
+    #header2 .header_right .header_right_top .left {
+        width: 176px;
+        box-sizing: border-box;
+        padding: 0px 20px;
+    }
+
+    #header2 .header_right .header_right_top .right {
+        width: 67%;
+    }
+
+    #header2 .header_right .header_right_top .end {
+        width: 41%;
+        position: relative;
+        left: 57%;
+    }
+
+    #signature h4 {
+        font-size: 14px;
+    }
+
+    #header2 .header_left {
+        width: 120px;
+        box-sizing: border-box;
+    }
+
+    #header2 .header_right .header_right_top .left {
+        width: 130px;
+    }
+
+    #header .header_right .header_right_top .right {
+        width: 68%;
+    }
+
+    .form_table div {
+        width: 100%;
+    }
+
+    .form_table div label {
+        padding: 0px 10px 0px 0px;
+    }
+
+    .class_section div {
+        width: 15%;
+    }
+}
+
+@media (min-width:768px) and (max-width: 991.99px) {
+    #header .header_right .header_right_top .left {
+        width: 140px;
+    }
+
+
+    #header .header_left {
+        width: 160px;
+    }
+
+    .select_iamge_body {
+        width: 100%;
+        height: 130px;
+    }
+
+    .gender label {
+        font-size: 17px;
+        padding: 0px 10px;
+    }
+
+    #header2 .header_right .header_right_top .right h1,
+    .heading_text {
+        font-size: 20px;
+    }
+
+    #header2 .header_right .header_right_top .right h2,
+    .heading_text_2 {
+        font-size: 18px;
+    }
+
+    .heading_p {
+        font-size: 14px;
+    }
+
+    .fill_by_office_table tr td h3 {
+        font-size: 14px;
+        width: 62%;
+    }
+
+    .reg_form_btn {
+        font-size: 16px;
+    }
+
+    .select_sc_madrsa {
+        font-size: 13px;
+    }
+
+    textarea,
+    select,
+    input[type=text],
+    input[type=email],
+    input[type=number],
+    input[type=date] {
+        width: 100%;
+        margin: 6px 0px;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .fill_by_office_table_body {
+        height: 166px !important;
+    }
+
+    .fill_by_office_table {
+        top: -22px;
+        width: 256px;
+        left: -18px;
+    }
+
+    .fill_by_office_table label {
+        font-size: 14px;
+    }
+
+    .fill_by_office_table input {
+        padding: 3px;
+        font-size: 14px;
+    }
+
+    #header2 .header_right .header_right_top .left {
+        width: 176px;
+        box-sizing: border-box;
+        padding: 0px 20px;
+    }
+
+    #header2 .header_right .header_right_top .right {
+        width: 50%;
+    }
+
+    #header2 .header_right .header_right_top .end {
+        width: 20%;
+        text-align: left;
+    }
+
+    #signature h4 {
+        font-size: 17px;
+    }
+
+    #header2 .header_left {
+        width: 120px;
+        box-sizing: border-box;
+    }
+
+    #header2 .header_right .header_right_top .left {
+        width: 150px;
+    }
+}
+
+@media (min-width:992px) and (max-width: 1199.99px) {
+
+    #header2 .header_right .header_right_top .right h1,
+    .heading_text {
+        font-size: 26px;
+    }
+
+    #header2 .header_right .header_right_top .right h2,
+    .heading_text_2 {
+        font-size: 23px;
+    }
+
+    .heading_p {
+        font-size: 14px;
+    }
+
+    .fill_by_office_table tr td h3 {
+        font-size: 18px;
+        width: 59%;
+    }
+
+    textarea,
+    select,
+    input[type=text],
+    input[type=email],
+    input[type=number],
+    input[type=date] {
+        width: 100%;
+        margin: 6px 0px;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .fill_by_office_table {
+        top: -79px;
+    }
+
+    #header2 .header_right .header_right_top .left {
+        width: 176px;
+        box-sizing: border-box;
+        padding: 0px 20px;
+    }
+
+    #header2 .header_right .header_right_top .right {
+        width: 50%;
+    }
+
+    #header2 .header_right .header_right_top .end {
+        width: 20%;
+        text-align: left;
+    }
+
+    #signature h4 {
+        font-size: 17px;
+    }
+}
