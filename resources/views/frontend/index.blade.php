@@ -1,6 +1,6 @@
 @extends('frontend.layout.index')
 @section('section')
-    <form action="{{ route('user_save') }}" method="POST"  enctype="multipart/form-data">
+    <form action="{{ route('user_store') }}" method="POST"  enctype="multipart/form-data">
         @csrf
         <header id="header">
             <div class="container">
@@ -126,14 +126,14 @@
                         <div class="form_table">
                             <div class="">
                                 <label class="ps-0" for="name">নাম:</label>
-                                <input type="text" class="{{($errors->first('name')) ? "form-error" : ""}}" name="name" value="" id="name" placeholder="আপনার নাম...">
+                                <input type="text" class="{{($errors->first('name')) ? "form-error" : ""}}" name="name" value="{{ old('name') }}" id="name" placeholder="আপনার নাম...">
                                 @error('name')
                                     <span class="col-12 text-danger">নাম অত্যাবশ্যকীয়</span>
                                 @enderror
                             </div>
                             <div>
                                 <label class="ps-0" for="name">Name (ইংরেজীতে):</label>
-                                <input type="text" class="{{($errors->first('name_eng')) ? "form-error" : ""}}" id="name" name="name_eng" value="" placeholder="Your Name...">
+                                <input type="text" class="{{($errors->first('name_eng')) ? "form-error" : ""}}" id="name" name="name_eng" value="{{ old('name_eng') }}" placeholder="Your Name...">
                                 @error('name_eng')
                                     <span class="col-12 text-danger">ইংরেজী নাম অত্যাবশ্যকীয়</span>
                                 @enderror
@@ -141,14 +141,14 @@
                             <div>
                                 <div class="col-md-6">
                                     <label for="name">পিতার নাম:</label>
-                                    <input type="text" class="{{($errors->first('father_name')) ? "form-error" : ""}}" id="name" name="father_name" value="" placeholder="পিতার নাম....">
+                                    <input type="text" class="{{($errors->first('father_name')) ? "form-error" : ""}}" id="name" name="father_name" value="{{ old('father_name') }}" placeholder="পিতার নাম....">
                                     @error('father_name')
                                         <span class="col-12 text-danger">পিতার নাম অত্যাবশ্যকীয়</span>
                                     @enderror
                                 </div>
                                 <div class="col-md-6">
                                     <label for="name">পিতার পেশা:</label>
-                                    <input type="text" id="name" class="{{($errors->first('father_occupation')) ? "form-error" : ""}}" name="father_occupation" value="" placeholder="পিতার পেশা....">
+                                    <input type="text" id="name" class="{{($errors->first('father_occupation')) ? "form-error" : ""}}" name="father_occupation" value="{{ old('father_occupation') }}" placeholder="পিতার পেশা....">
                                     @error('father_occupation')
                                         <span class="col-12 text-danger">পিতার পেশা অত্যাবশ্যকীয়</span>
                                     @enderror
@@ -157,7 +157,7 @@
                             <div>
                                 <div class="col-12 p-0">
                                     <label for="name">Father's Name (ইংরেজীতে):</label>
-                                    <input type="text" class="{{($errors->first('father_name_eng')) ? "form-error" : ""}}" id="name" name="father_name_eng" value="" placeholder="Your Father's Name...">
+                                    <input type="text" class="{{($errors->first('father_name_eng')) ? "form-error" : ""}}" id="name" name="father_name_eng" value="{{ old('father_name_eng') }}" placeholder="Your Father's Name...">
                                     @error('father_name_eng')
                                         <span class="col-12 text-danger">পিতার ইংরেজী নাম অত্যাবশ্যকীয়</span>
                                     @enderror
@@ -166,14 +166,14 @@
                             <div>
                                 <div class="col-md-6">
                                     <label for="name">মাতার নাম:</label>
-                                    <input type="text" class="{{($errors->first('mother_name')) ? "form-error" : ""}}" id="name" name="mother_name" value="" placeholder="মাতার নাম....">
+                                    <input type="text" class="{{($errors->first('mother_name')) ? "form-error" : ""}}" id="name" name="mother_name" value="{{ old('mother_name') }}" placeholder="মাতার নাম....">
                                     @error('mother_name')
                                         <span class="col-12 text-danger">মাতার নাম অত্যাবশ্যকীয়</span>
                                     @enderror
                                 </div>
                                 <div class="col-md-6">
                                     <label for="name">মাতার পেশা:</label>
-                                    <input type="text" class="{{($errors->first('mother_occupation')) ? "form-error" : ""}}" id="name" name="mother_occupation" value="" placeholder="মাতার পেশা....">
+                                    <input type="text" class="{{($errors->first('mother_occupation')) ? "form-error" : ""}}" id="name" name="mother_occupation" value="{{ old('mother_occupation') }}" placeholder="মাতার পেশা....">
                                     @error('mother_name')
                                         <span class="col-12 text-danger">মাতার পেশা অত্যাবশ্যকীয়</span>
                                     @enderror
@@ -182,7 +182,7 @@
                             <div>
                                 <div class="col-12 p-0">
                                     <label for="name">Mother's Name (ইংরেজীতে):</label>
-                                    <input type="text" class="{{($errors->first('mother_name_eng')) ? "form-error" : ""}}" id="name" name="mother_name_eng" value="" placeholder="Your Mother's Name...">
+                                    <input type="text" class="{{($errors->first('mother_name_eng')) ? "form-error" : ""}}" id="name" name="mother_name_eng" value="{{ old('mother_name_eng') }}" placeholder="Your Mother's Name...">
                                     @error('mother_name_eng')
                                         <span class="col-12 text-danger">মাতার ইংরেজী নাম অত্যাবশ্যকীয়</span>
                                     @enderror
@@ -191,7 +191,7 @@
                             <div>
                                 <div class="col-12 p-0">
                                     <label for="name">বর্তমান ঠিকানা:</label>
-                                    <input type="text" class="{{($errors->first('present_address')) ? "form-error" : ""}}" id="name" name="present_address" value="" placeholder="বর্তমান ঠিকানা...">
+                                    <input type="text" class="{{($errors->first('present_address')) ? "form-error" : ""}}" id="name" name="present_address" value="{{ old('present_address') }}" placeholder="বর্তমান ঠিকানা...">
                                     @error('present_address')
                                         <span class="col-12 text-danger">বর্তমান ঠিকানা অত্যাবশ্যকীয়</span>
                                     @enderror
@@ -200,7 +200,7 @@
                             <div>
                                 <div class="col-12 p-0">
                                     <label for="name">স্থায়ী ঠিকানা:</label>
-                                    <input type="text" class="{{($errors->first('parmanent_address')) ? "form-error" : ""}}" id="name" name="parmanent_address" value="" placeholder="স্থায়ী ঠিকানা...">
+                                    <input type="text" class="{{($errors->first('parmanent_address')) ? "form-error" : ""}}" id="name" name="parmanent_address" value="{{ old('parmanent_address') }}" placeholder="স্থায়ী ঠিকানা...">
                                     @error('parmanent_address')
                                         <span class="col-12 text-danger">স্থায়ী ঠিকানা অত্যাবশ্যকীয়</span>
                                     @enderror
@@ -209,15 +209,15 @@
                             <div>
                                 <div class="col-md-6">
                                     <label for="number">ফোন/মোবাইল:</label>
-                                    <input type="number" class="{{($errors->first('mobile_number')) ? "form-error" : ""}}" min="" max="" step="" name="mobile_number" id="number"
-                                        placeholder="ফোন/মোবাইল.......">
+                                    <input type="number" class="{{($errors->first('mobile_number')) ? "form-error" : ""}}" name="mobile_number" id="number"
+                                        placeholder="ফোন/মোবাইল......." value="{{ old('mobile_number') }}">
                                     @error('mobile_number')
                                         <span class="col-12 text-danger">ফোন/মোবাইল অত্যাবশ্যকীয়</span>
                                     @enderror
                                 </div>
                                 <div class="col-md-6 ">
                                     <label for="birthday">জন্ম তারিখ:</label>
-                                    <input type="date" class="{{($errors->first('birth_date')) ? "form-error" : ""}}" id="birthday" name="birth_date">
+                                    <input type="date" class="{{($errors->first('birth_date')) ? "form-error" : ""}}" id="birthday" name="birth_date" value = "{{ old('birth_date') }}">
                                     @error('birth_date')
                                         <span class="col-12 text-danger">জন্ম তারিখ অত্যাবশ্যকীয়</span>
                                     @enderror
@@ -226,14 +226,14 @@
                             <div>
                                 <div class="col-md-6 ">
                                     <label for="name">শিক্ষা প্রতিষ্ঠান:</label>
-                                    <input type="text" class="{{($errors->first('school_name')) ? "form-error" : ""}}" id="name" name="school_name" value="" placeholder="শিক্ষা প্রতিষ্ঠান....">
+                                    <input type="text" class="{{($errors->first('school_name')) ? "form-error" : ""}}" id="name" name="school_name" value="{{ old('school_name') }}" placeholder="শিক্ষা প্রতিষ্ঠান....">
                                     @error('school_name')
                                         <span class="col-12 text-danger">শিক্ষা প্রতিষ্ঠান অত্যাবশ্যকীয়</span>
                                     @enderror
                                 </div>
                                 <div class="col-md-6 ">
                                     <label for="name">শিফট:</label>
-                                    <input type="text" class="{{($errors->first('shift')) ? "form-error" : ""}}" id="name" name="shift" value="" placeholder="শিফট....">
+                                    <input type="text" class="{{ ($errors->first('shift')) ? "form-error" : "" }}" id="name" name="shift" value="{{ old('shift') }}" placeholder="শিফট....">
                                     @error('present_address')
                                         <span class="col-12 text-danger">শিফট অত্যাবশ্যকীয়</span>
                                     @enderror
@@ -242,7 +242,7 @@
                             <div>
                                 <div class="col-md-12 p-0 ">
                                     <label for="name">Institution (ইংরেজীতে):</label>
-                                    <input type="text" class="{{($errors->first('school_name_eng')) ? "form-error" : ""}}" id="name" name="school_name_eng" value="" placeholder="Institution Name...">
+                                    <input type="text" class="{{($errors->first('school_name_eng')) ? "form-error" : ""}}" id="name" name="school_name_eng" value="{{ old('school_name_eng') }}" placeholder="Institution Name...">
                                     @error('school_name_eng')
                                         <span class="col-12 text-danger">শিক্ষা প্রতিষ্ঠানের ইংরেজী নাম অত্যাবশ্যকীয়</span>
                                     @enderror
@@ -251,7 +251,7 @@
                             <div class="row">
                                 <div class="col-md-3 col-lg-2">
                                     <label for="name">শ্রেণি:</label>
-                                    <input type="text" class="{{($errors->first('class_name')) ? "form-error" : ""}}" id="name" name="class_name" value="" placeholder="শ্রেণি....">
+                                    <input type="text" class="{{($errors->first('class_name')) ? "form-error" : ""}}" id="name" name="class_name" value="{{ old('class_name') }}" placeholder="শ্রেণি....">
                                     @error('class_name')
                                         <span class="col-12 text-danger">শ্রেণি অত্যাবশ্যকীয়</span>
                                     @enderror
@@ -259,7 +259,7 @@
 
                                 <div class="col-md-2 ">
                                     <label for="name">শাখা:</label>
-                                    <input type="text" class="{{($errors->first('section_name')) ? "form-error" : ""}}" id="name" name="section_name" value="" placeholder="শাখা....">
+                                    <input type="text" class="{{($errors->first('section_name')) ? "form-error" : ""}}" id="name" name="section_name" value="{{ old('section_name') }}" placeholder="শাখা....">
                                     @error('section_name')
                                         <span class="col-12 text-danger">শাখা অত্যাবশ্যকীয়</span>
                                     @enderror
@@ -267,8 +267,8 @@
 
                                 <div class="col-md-3 ">
                                     <label for="number">রোল নং:</label>
-                                    <input type="text" class="{{($errors->first('roll_no')) ? "form-error" : ""}}" min="" max="" step="" name="roll_no" id="number"
-                                        placeholder="রোল নং.......">
+                                    <input type="text" class="{{($errors->first('roll_no')) ? "form-error" : ""}}"  name="roll_no" id="number"
+                                      value="{{ old('roll_no') }}"  placeholder="রোল নং.......">
                                     @error('roll_no')
                                         <span class="col-12 text-danger">রোল অত্যাবশ্যকীয়</span>
                                     @enderror

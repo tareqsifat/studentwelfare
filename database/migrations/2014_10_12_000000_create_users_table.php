@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->boolean('medium')->nullable();
             $table->boolean('is_school')->nullable();
             $table->string('name', 100)->nullable();
+            $table->string('email', 100)->nullable();
             $table->string('name_eng', 100)->nullable();
             $table->string('father_name', 100)->nullable();
             $table->string('father_occupation', 100)->nullable();

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', "Frontend\WebsiteContrller@index")->name('website_index');
-Route::post('/user_save',"Frontend\WebsiteContrller@save_user_info")->name('user_save');
+Route::post('/user_save',"Backend\UserContrller@store")->name('user_store');
 
 Auth::routes();
 
