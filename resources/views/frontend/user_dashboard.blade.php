@@ -9,8 +9,7 @@
                         <div class="picture">
                             <div class="pic select_iamge_body text-center">
                                 <label class="d-block select_image" class="{{($errors->first('photo')) ? "form-error" : ""}}">uplod your pic
-                                    <input type="file" name="photo" style="visibility: hidden;">
-                                    <img src="" alt="">
+                                    <img src="{{ $collection->photo }}" alt="">
                                 </label>
                             </div>
                             <div class="gender">
@@ -129,180 +128,161 @@
         <section id="fi_one">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="form_table">
-                            <div class="">
-                                <label class="ps-0" for="name">নাম:</label>
-                                <input type="text" class="{{($errors->first('name')) ? "form-error" : ""}}" name="name" value="{{ old('name') }}" id="name" placeholder="আপনার নাম...">
-                                @error('name')
-                                    <span class="col-12 text-danger">নাম অত্যাবশ্যকীয়</span>
-                                @enderror
-                            </div>
-                            <div>
-                                <label class="ps-0" for="name">Name (ইংরেজীতে):</label>
-                                <input type="text" class="{{($errors->first('name_eng')) ? "form-error" : ""}}" id="name" name="name_eng" value="{{ old('name_eng') }}" placeholder="Your Name...">
-                                @error('name_eng')
-                                    <span class="col-12 text-danger">ইংরেজী নাম অত্যাবশ্যকীয়</span>
-                                @enderror
-                            </div>
-                            <div>
-                                <div class="col-md-6">
-                                    <label for="name">পিতার নাম:</label>
-                                    <input type="text" class="{{($errors->first('father_name')) ? "form-error" : ""}}" id="name" name="father_name" value="{{ old('father_name') }}" placeholder="পিতার নাম....">
-                                    @error('father_name')
-                                        <span class="col-12 text-danger">পিতার নাম অত্যাবশ্যকীয়</span>
-                                    @enderror
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="name">পিতার পেশা:</label>
-                                    <input type="text" id="name" class="{{($errors->first('father_occupation')) ? "form-error" : ""}}" name="father_occupation" value="{{ old('father_occupation') }}" placeholder="পিতার পেশা....">
-                                    @error('father_occupation')
-                                        <span class="col-12 text-danger">পিতার পেশা অত্যাবশ্যকীয়</span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div>
-                                <div class="col-12 p-0">
-                                    <label for="name">Father's Name (ইংরেজীতে):</label>
-                                    <input type="text" class="{{($errors->first('father_name_eng')) ? "form-error" : ""}}" id="name" name="father_name_eng" value="{{ old('father_name_eng') }}" placeholder="Your Father's Name...">
-                                    @error('father_name_eng')
-                                        <span class="col-12 text-danger">পিতার ইংরেজী নাম অত্যাবশ্যকীয়</span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div>
-                                <div class="col-md-6">
-                                    <label for="name">মাতার নাম:</label>
-                                    <input type="text" class="{{($errors->first('mother_name')) ? "form-error" : ""}}" id="name" name="mother_name" value="{{ old('mother_name') }}" placeholder="মাতার নাম....">
-                                    @error('mother_name')
-                                        <span class="col-12 text-danger">মাতার নাম অত্যাবশ্যকীয়</span>
-                                    @enderror
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="name">মাতার পেশা:</label>
-                                    <input type="text" class="{{($errors->first('mother_occupation')) ? "form-error" : ""}}" id="name" name="mother_occupation" value="{{ old('mother_occupation') }}" placeholder="মাতার পেশা....">
-                                    @error('mother_name')
-                                        <span class="col-12 text-danger">মাতার পেশা অত্যাবশ্যকীয়</span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div>
-                                <div class="col-12 p-0">
-                                    <label for="name">Mother's Name (ইংরেজীতে):</label>
-                                    <input type="text" class="{{($errors->first('mother_name_eng')) ? "form-error" : ""}}" id="name" name="mother_name_eng" value="{{ old('mother_name_eng') }}" placeholder="Your Mother's Name...">
-                                    @error('mother_name_eng')
-                                        <span class="col-12 text-danger">মাতার ইংরেজী নাম অত্যাবশ্যকীয়</span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div>
-                                <div class="col-12 p-0">
-                                    <label for="name">বর্তমান ঠিকানা:</label>
-                                    <input type="text" class="{{($errors->first('present_address')) ? "form-error" : ""}}" id="name" name="present_address" value="{{ old('present_address') }}" placeholder="বর্তমান ঠিকানা...">
-                                    @error('present_address')
-                                        <span class="col-12 text-danger">বর্তমান ঠিকানা অত্যাবশ্যকীয়</span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div>
-                                <div class="col-12 p-0">
-                                    <label for="name">স্থায়ী ঠিকানা:</label>
-                                    <input type="text" class="{{($errors->first('parmanent_address')) ? "form-error" : ""}}" id="name" name="parmanent_address" value="{{ old('parmanent_address') }}" placeholder="স্থায়ী ঠিকানা...">
-                                    @error('parmanent_address')
-                                        <span class="col-12 text-danger">স্থায়ী ঠিকানা অত্যাবশ্যকীয়</span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div>
-                                <div class="col-md-6">
-                                    <label for="number">ফোন/মোবাইল:</label>
-                                    <input type="number" class="{{($errors->first('mobile_number')) ? "form-error" : ""}}" name="mobile_number" id="number"
-                                        placeholder="ফোন/মোবাইল......." value="{{ old('mobile_number') }}">
-                                    @error('mobile_number')
-                                        <span class="col-12 text-danger">ফোন/মোবাইল অত্যাবশ্যকীয়</span>
-                                    @enderror
-                                </div>
-                                <div class="col-md-6 ">
-                                    <label for="birthday">জন্ম তারিখ:</label>
-                                    <input type="date" class="{{($errors->first('birth_date')) ? "form-error" : ""}}" id="birthday" name="birth_date" value = "{{ old('birth_date') }}">
-                                    @error('birth_date')
-                                        <span class="col-12 text-danger">জন্ম তারিখ অত্যাবশ্যকীয়</span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div>
-                                <div class="col-md-6 ">
-                                    <label for="name">শিক্ষা প্রতিষ্ঠান:</label>
-                                    <input type="text" class="{{($errors->first('school_name')) ? "form-error" : ""}}" id="name" name="school_name" value="{{ old('school_name') }}" placeholder="শিক্ষা প্রতিষ্ঠান....">
-                                    @error('school_name')
-                                        <span class="col-12 text-danger">শিক্ষা প্রতিষ্ঠান অত্যাবশ্যকীয়</span>
-                                    @enderror
-                                </div>
-                                <div class="col-md-6 ">
-                                    <label for="name">শিফট:</label>
-                                    <input type="text" class="{{ ($errors->first('shift')) ? "form-error" : "" }}" id="name" name="shift" value="{{ old('shift') }}" placeholder="শিফট....">
-                                    @error('present_address')
-                                        <span class="col-12 text-danger">শিফট অত্যাবশ্যকীয়</span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div>
-                                <div class="col-md-12 p-0 ">
-                                    <label for="name">Institution (ইংরেজীতে):</label>
-                                    <input type="text" class="{{($errors->first('school_name_eng')) ? "form-error" : ""}}" id="name" name="school_name_eng" value="{{ old('school_name_eng') }}" placeholder="Institution Name...">
-                                    @error('school_name_eng')
-                                        <span class="col-12 text-danger">শিক্ষা প্রতিষ্ঠানের ইংরেজী নাম অত্যাবশ্যকীয়</span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3 col-lg-2">
-                                    <label for="name">শ্রেণি:</label>
-                                    <input type="text" class="{{($errors->first('class_name')) ? "form-error" : ""}}" id="name" name="class_name" value="{{ old('class_name') }}" placeholder="শ্রেণি....">
-                                    @error('class_name')
-                                        <span class="col-12 text-danger">শ্রেণি অত্যাবশ্যকীয়</span>
-                                    @enderror
-                                </div>
-
-                                <div class="col-md-2 ">
-                                    <label for="name">শাখা:</label>
-                                    <input type="text" class="{{($errors->first('section_name')) ? "form-error" : ""}}" id="name" name="section_name" value="{{ old('section_name') }}" placeholder="শাখা....">
-                                    @error('section_name')
-                                        <span class="col-12 text-danger">শাখা অত্যাবশ্যকীয়</span>
-                                    @enderror
-                                </div>
-
-                                <div class="col-md-3 ">
-                                    <label for="number">রোল নং:</label>
-                                    <input type="text" class="{{($errors->first('roll_no')) ? "form-error" : ""}}"  name="roll_no" id="number"
-                                      value="{{ old('roll_no') }}"  placeholder="রোল নং.......">
-                                    @error('roll_no')
-                                        <span class="col-12 text-danger">রোল অত্যাবশ্যকীয়</span>
-                                    @enderror
-                                </div>
-                                <div class="col-md-2 col-lg-5 class_section {{($errors->first('section_name')) ? "form-error" : ""}} ">
-                                    <label>বিভাগ:</label>
-
-                                    <div>
-                                        <input name="section_name" value="0" type="radio" id="since">
-                                        <label for="since" class="ps-1">বিজ্ঞান</label>
-                                    </div>
-
-                                    <div>
-                                        <input name="section_name" value="1" type="radio" id="comarc">
-                                        <label for="comarc" class="ps-1">বাণিজ্য</label>
-                                    </div>
-
-                                    <div>
-                                        <input name="section_name" value="2" type="radio" id="art">
-                                        <label for="art" class="ps-1">মানবিক</label>
-                                    </div>
-                                    @error('section_name')
-                                        <span class="col-12 text-danger">বিভাগ অত্যাবশ্যকীয়</span>
-                                    @enderror
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-md-12 fill_by_office_table_body">
+                        <table class="fill_by_office_table" style="border: 1px solid black">
+                            <tr>
+                                <td>
+                                    নাম:
+                                </td>
+                                <td>
+                                    {{ $collection->name }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Name (ইংরেজীতে):
+                                </td>
+                                <td>
+                                    {{ $collection->name_eng }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   পিতার নাম:
+                                </td>
+                                <td>
+                                    {{ $collection->father_name }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   পিতার পেশা:
+                                </td>
+                                <td>
+                                    {{ $collection->father_occupation }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   Father's Name (ইংরেজীতে):
+                                </td>
+                                <td>
+                                    {{ $collection->father_name_eng }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   মাতার নাম:
+                                </td>
+                                <td>
+                                    {{ $collection->mother_name }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   মাতার পেশা:
+                                </td>
+                                <td>
+                                    {{ $collection->mother_occupation }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   Mother's Name (ইংরেজী):
+                                </td>
+                                <td>
+                                    {{ $collection->mother_name_eng }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   বর্তমান ঠিকানা:
+                                </td>
+                                <td>
+                                    {{ $collection->present_address }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   স্থায়ী ঠিকানা:
+                                </td>
+                                <td>
+                                    {{ $collection->parmanent_address }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   ফোন/মোবাইল:
+                                </td>
+                                <td>
+                                    {{ $collection->mobile_number }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   জন্ম তারিখ:
+                                </td>
+                                <td>
+                                    {{ $collection->birth_date }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   শিক্ষা প্রতিষ্ঠান:
+                                </td>
+                                <td>
+                                    {{ $collection->school_name }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   শিফট:
+                                </td>
+                                <td>
+                                    {{ $collection->shift }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                Institute (ইংরেজীতে):
+                                </td>
+                                <td>
+                                    {{ $collection->school_name_eng }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   শ্রেণি:
+                                </td>
+                                <td>
+                                    {{ $collection->class_name }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   শাখা:
+                                </td>
+                                <td>
+                                    {{ $collection->section_name }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                   রোল নং:
+                                </td>
+                                <td>
+                                    {{ $collection->roll_no }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    বিভাগ:
+                                </td>
+                                <td>
+                                    {{ $collection->section_name }}
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
