@@ -14,8 +14,11 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
+// user routes
 Route::get('/', "Frontend\WebsiteContrller@index")->name('website_index');
-Route::post('/user_save',"Backend\UserContrller@store")->name('user_store');
+Route::post('/user_save',"Frontend\UserController@store")->name('user_store');
+Route::get('/user_edit/{id}', "Frontend\UserController@edit")->name('user_edit');
+Route::post('/user_update/{id}',"Backend\UserController@update")->name('user_update');
 
 // CustomAuthRoutes
 Route::get('/user_login','CustomAuth\CustomAuthController@index')->name('user_login');
