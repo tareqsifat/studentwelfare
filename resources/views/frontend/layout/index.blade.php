@@ -4,7 +4,7 @@
 <head>
     <title>The Students Welfare Foundation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{{ asset('frontend/img/logo.png') }}">
+    <link rel="shortcut icon" href="{{ asset('contents/frontend/img/logo.png') }}">
 
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">

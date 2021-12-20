@@ -13,4 +13,8 @@ class WebsiteContrller extends Controller
     {
         return view('frontend.index');
     }
+    public function curriculam()
+    {
+        return view('frontend.curriculam');
+    }
 }

@@ -34,7 +34,7 @@
                     <div class="header_right">
                         <div class="header_right_top">
                             <div class="left">
-                                <img class="w-100" src="{{ asset('frontend') }}/img/logo.png" alt="">
+                                <img class="w-100" src="{{ asset('contents/frontend') }}/img/logo.png" alt="">
                             </div>
                             <div class="right">
                                 <h1 class="heading_text">দি স্টুডেন্টস ওয়েলফেয়ার ফাউন্ডেশন</h1>
@@ -313,6 +313,5 @@
             </div>
         </div>
     </form>
-    
 @endsection
     
