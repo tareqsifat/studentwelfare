@@ -81,7 +81,7 @@
                             @enderror
                         </div>
                         <div class="col-md-4 text-center">
-                            <input type="text" class="text-center" placeholder="বৃত্তি পরীক্ষা..................ইং">
+                            <input type="text" class="text-center" placeholder="বৃত্তি পরীক্ষা ২০২১ ইং">
                             <div class="f_hader"  style="visibility: hidden">
                                 <h3 class="reg_form_btn">রেজিষ্ট্রেশন ফরম</h3>
                             </div>
@@ -124,16 +124,16 @@
             </div>
         </div>
     </header>
-    <div class="containter" style="margin: 35px 100px">
+    <div class="containter" style="margin: 0px 100px">
         <div class="row">
             <div class="col-12" style="display: flex; align-items: center">
                 <div class="classbutton">
-                    <p>আপনার শিক্ষা কারিকুলাম নির্ধারন করুন</p>
+                    <p>আপনার শিক্ষা কারিকুলাম নির্ধারন করুনঃ-</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="containter" style="margin: 35px 100px">
+    <div class="containter" style="margin: 0px 100px">
         <div class="row">
             <div class="col-12" style="display: flex; align-items: center">
                 <div class="classbutton">

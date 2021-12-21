@@ -6,7 +6,7 @@
     <header id="header">
         <div class="container">
             <div class="row">
-                <div class="header_left">
+                <div class="header_left" style="visibility: hidden">
                     <div class="picture">
                         <div class="pic select_iamge_body text-center">
                             <label class="d-block select_image" class="{{($errors->first('photo')) ? "form-error" : ""}}">uplod your pic
@@ -43,15 +43,16 @@
                             <p class="heading_p">(গভ: রেজি: নং- S-9287/09)</p>
                             <p class="heading_p">www.swfdhaka.info</p>
                         </div>
-                        <div class="right_side text-center">
+                        <div class="right_side text-center"  style="visibility: hidden">
                             <p style="font-size: 17px; margin-bottom: 0.1rem">আগে রেজিষ্টার করে থাকলে</p>
                             <div class="f_hader">
                                 <a href="{{ route('user_login') }}"><h3 class="reg_form_btn">লগিন করুন</h3></a>
+                                
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-3"  style="visibility: hidden">
                             <div class="select_sc_madrsa">
                                 <label>টিক চিহ্ন দাও</label><br>
                                 <label for="school"  class="{{($errors->first('is_school')) ? "form-error" : ""}}">
@@ -83,12 +84,12 @@
                             @enderror
                         </div>
                         <div class="col-md-4 text-center">
-                            <input type="text" class="text-center" placeholder="বৃত্তি পরীক্ষা..................ইং">
-                            <div class="f_hader">
+                            <input type="text" class="text-center" placeholder="বৃত্তি পরীক্ষা ২০২১ ইং">
+                            <div class="f_hader"  style="visibility: hidden">
                                 <h3 class="reg_form_btn">রেজিষ্ট্রেশন ফরম</h3>
                             </div>
                         </div>
-                        <div class="col-md-5 fill_by_office_table_body">
+                        <div class="col-md-5 fill_by_office_table_body"  style="visibility: hidden">
                             <table class="fill_by_office_table">
                                 <tr>
                                     <td colspan="2">
@@ -126,7 +127,17 @@
             </div>
         </div>
     </header>
-    <div class="containter" style="margin: 35px 100px">
+    
+    <div class="containter" style="margin: 0px 100px">
+        <div class="row">
+            <div class="col-12" style="display: flex; align-items: center">
+                <div class="classbutton">
+                    <p>আপনার শ্রেনী নির্ধারন করুনঃ-</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="containter" style="margin: 0px 100px">
         <div class="row">
             <div class="col-12" style="display: flex; align-items: center">
                 <div class="classbutton">
